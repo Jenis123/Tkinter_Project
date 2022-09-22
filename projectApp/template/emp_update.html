@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title><h3>Emloyee Display</h3></title>
+       
+    </head>
+    <center>
+        <hr>
+            <h1>EMPLOYEE DISPLAY</h1>
+
+        </hr>
+        <hr>
+    
+        <body>
+            <form method="POST" action="/emp_disp/">
+                {% csrf_token %}
+                {{uniqq.as_p}}
+
+                <!-- <br><label for="username"><b>username</b></label><br>
+                <input type="text" id="username" name="username" value="{{uniqq.username}}"><br>
+
+                <br><label for="email"><b>email</b></label><br>
+                <input type ="email" id ="email" name="email" value="{{uniqq.email}}"><br>
+
+                <br><label for="address"><b>Address</b></label><br>
+                <input type= "textarea" id ="address" name ="address" value ="{{uniqq.address}}"><br>
+
+                <br><label for="phone no"><b>Phone Number</b></label>
+                    <input type="number" name="phoneno" placeholder = "Enter phone number">
+                    {% if m_msg %}
+                    <div style = "color:red"  class="alert alert-danger" role="alert">
+                    {{m_msg}}
+                    </div>
+                    {% endif %}<br> -->
+
+                <!-- <br><label for ="Gender">Gender</label><br>
+                <label for ="male">Male</label>
+                <input type ="radio" id ="Gender" name="gender" value="Male">
+                <label for= "female">Female</label>
+                <input type="radio" id="Gender" name ="gender" value="Female"><br> -->
+                
+                <!-- {% if empp.gender == 'Male' %}
+                <td><input type="radio"  name="gender" value="Male" checked> male
+                    <input type="radio"  name="gender" value="Female"> female</td>
+                <!-- <input type="radio"  name="rate" value="Multi Rate" checked="checked"> Multi Rate   -->
+                <!-- {% elif empp.gender == 'Memale' %}
+                <td><input type="radio"  name="gender" value="Male"> male
+                    <input type="radio"  name="gender" value="Female" checked> female</td>
+                {% endif %} 
+             --> 
+
+                <!-- <br><label for ="hobbies">Hobbies</label><br>
+                
+
+                <label for ="hobbies">cricket</label>
+                <input type="checkbox" name ="checks[]"  value="cricket">
+                <label for ="hobbies">writing</label>
+                <input type="checkbox"  name ="checks[]"  value="writing">
+                <label for ="hobbies">music</label>
+                <input type="checkbox" name ="checks[]"  value="music">
+                <label for ="hobbies">reading</label>
+                <input type="checkbox" name ="checks[]"  value="reading"><br>
+
+                 <br><label for ="department">Department</label><br>
+                <input type="text" id ="department" name="department" value=""><br>
+                 </br><label for="department">department</label>
+
+                <select name="department" id="department">
+                    <option value="IT">IT</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="accounting">Accounting</option> -->
+
+                <!-- </select></br>   -->
+                <label for ="button"></label><br>
+                <input type="submit" value="Update"><br>
+
+                
+
+            </form>
+            <a href ="{% url 'emp_disp' %}"><input type = "button" id = "button" name = "index" value = "Back Employee Display"></a></br></hr> 
+        </body>
+    </center>
+    </hr<
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>DISPLAY</title>
+    </head>
+    <body>
+        <br>
+        {% comment %} <a href="{% url 'logout_student' %}">
+            <button class="btn btn-primary" style="height:3%;width:5%;margin-left:85%;">logout</button>
+        </a> {% endcomment %}
+        <center>
+            <h1><center>Employee records</center></h1>
+            <table border="2" width ="800" height = "50" align="center">
+                <tr>
+                    <th>username</th>
+                    <th>email</th>
+                    <th>address</th>
+                    <th>phone_no</th>
+                    <th>gender</th>
+                    <th>hobbies</th>
+                    <th>department</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                {% for data in emp_all %}            
+                <tr align="center">
+
+                    <td>{{data.username}}</td>
+                    <td>{{data.email}}</td>
+                    <td>{{data.address}}</td>
+                    <td>{{data.phone_no}}</td>
+                    <td>{{data.gender}}</td>
+                    <td>{{data.hobbies}}</td>
+                    <td>{{data.department}}</td>
+                    <td><button><a href="/emp_select/{{data.uniq_id}}">Edit</a></button></td> 
+                    <!-- <td><button><a onclick="confirm( 'Are You sure You Want To Delete ??');">Delete</a></button</td> --> -->
+                 
+                </tr>
+                {% endfor %}
+            </table>
+            <hr><br>
+            <a href ="{% url 'emp_insert' %}"><input type = "button" id = "button" name = "index" value = "Add New Employee"></a></br></hr> 
+           
+        </center>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Update</title>
+    </head>
+    <body>
+        <form method="POST" action="/upd_index/{{empp.no}}">
+            {% csrf_token %}
+
+            <!-- <br><label for = "number"></label>
+            <input type ="hidden" name="no" ><br> -->
+
+            <br><label for="fname">fname</label><br>
+            <input type="text" id="fname" name="fname" value="{{empp.fname}}"><br>
+
+            <br><label for="lname">lname</label><br>
+            <input type ="text" id ="lname" name="lname" value="{{empp.lname}}"><br>
+
+            <td>Gender</td>
+            <!-- <div id="no"> -->
+                {% if empp.gender == 'male' %}
+                <td><input type="radio"  name="gender" value="male" checked> male
+                    <input type="radio"  name="gender" value="female"> female</td>
+                <!-- <input type="radio"  name="rate" value="Multi Rate" checked="checked"> Multi Rate   -->
+                {% elif empp.gender == 'female' %}
+                <td><input type="radio"  name="gender" value="male"> male
+                    <input type="radio"  name="gender" value="female" checked> female</td>
+                {% endif %}           
+            <!-- </div> -->
+
+            <br><label for="address">Address</label><br>
+            <input type= "textarea" id ="address" name ="address" value ="{{empp.address}}"><br>
+
+            <br><label for ="hobbies">Hobbies</label><br>
+            {% if  'cricket' in a %}
+                <input type="checkbox" name ="hobbies"  value="cricket" checked> cricket
+            {% else %}
+                <input type="checkbox" name ="hobbies" value="cricket" > cricket  
+            {% endif %}             
+        
+            {% if 'writing' in a %}
+                <input type="checkbox" name ="hobbies" value="writing" checked> writing
+            {% else %}
+                <input type="checkbox"  name ="hobbies" value="writing" > writing  
+            {% endif %} 
+            
+            
+            {% if 'music' in a %}
+                <input type="checkbox" name ="hobbies" value="music" checked> music
+            {% else %}
+                <input type="checkbox" name ="hobbies" value="music" > music  
+            {% endif %} 
+            
+            {% if 'reading' in a %}
+                <input type="checkbox" name ="hobbies" value="reading" checked> reading
+            {% else %}
+                <input type="checkbox"  name ="hobbies" value="reading" > reading  
+            {% endif %} 
+
+            <br><label for ="department">Department</label><br>
+            <input type="text" id ="department" name="department" value="{{empp.department}}"><br>
+
+<!-- 
+            <label for ="update"></label><br> -->
+            <!-- <input type ="submit" value="update"><br> -->
+            <input type="submit" value="Update" >
+            <!-- <a href="{% url 'disp_index' %}">update</a> -->
+           
+           
+            {% comment %} {% if messages %}
+            {% for result in messages%}
+            {{result}}
+            {% endfor%}
+            {% endif %} {% endcomment %}
+        </form>
+    </body>
+</html>

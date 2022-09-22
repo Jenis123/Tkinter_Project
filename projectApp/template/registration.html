@@ -1,0 +1,54 @@
+<html>
+    <title>REGISTRATION</title>
+    <center>
+        <head><h1>REGISTRATION</h1></head>
+        <body>
+   
+            <form method="POST" action= "/register/">
+                {% csrf_token %}
+
+                <!-- <br><label for = "number"></label>
+                <input type ="hidden" name="no" ><br> -->
+                <hr>
+                <br><label for="username"><b>UserName</b></label>
+                <input type="text" name="username"  placeholder = "Enter Your Username" required><br>
+                 
+                    
+                <br><label for="email"><b>Email</b></label>
+                <input type = "email" name="email" placeholder = "Enter Your Email" requi><br>
+                {% if e_msg %}
+                <div style = "color:red" class="alert alert-danger" role="alert">
+                {{e_msg}}
+                </div>
+                {% endif %}
+                
+                <br><label for="phone no"><b>Phone Number</b></label>
+                <input type="number" name="phoneno" placeholder = "Enter phone number">
+                    {% if m_msg %}
+                    <div style = "color:red"  class="alert alert-danger" role="alert">
+                    {{m_msg}}
+                    </div>
+                    {% endif %}<br>
+                    
+                <br><label for="password"><b>Password</b></label>
+                <input type="password" name="password" placeholder = "Enter Your password"><br>
+                {% if p_msg %}
+                <div style = "color:red"  class="alert alert-danger" role="alert">
+                {{p_msg}}
+                </div>
+                {% endif %}
+                
+                <br><label for="password"><b>Confirm Password</b></label>
+                <input type="password" name="confirm_password" placeholder = "Enter Confirm Password"><br>
+                </hr>
+       
+                <hr>
+                <br><input  type = "submit" value = "Submit"></br>
+                </hr>
+                <br><label for ="/login"> <b>Alredy Have Account?</b></label>
+            </form>
+        </center>
+
+         
+    </body>
+</html>

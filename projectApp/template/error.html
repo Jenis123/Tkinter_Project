@@ -1,0 +1,18 @@
+<html>
+    <title>ERROR</title>
+    <center>
+        <head>
+            <body>
+                <form method="post" action = "{% url 'error' %}">
+                    {% csrf_token %}
+                    <h2>page not found</h2>
+                    <h1>404 Error</h1>
+                    
+                    {% comment %} <br><label for ="register"> <b></b></label> {% endcomment %}
+                    <a href ="{% url 'disp_index' %}"><input type = "button" id = "button" name = "disp_index" value = "disp_index"></a></br>
+                
+                </form>
+            </body>
+        </head>
+    </center>
+</html>
